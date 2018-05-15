@@ -1,0 +1,164 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box; }
+
+.conversation {
+  /* ここに背景を指定できます */
+  /* background-image: url(); */
+  /* background-size: contain; */
+  width: 50%;
+  display: inline-block;
+  border: 5px solid #d7ebfe;
+  padding: 0 15px 10px 15px;
+  border-radius: 10px; }
+
+/* 吹き出しを作る */
+.ballon {
+  margin: 40px 0;
+  padding: 0 40px;
+  position: relative; }
+
+.ballon:after, .ballon:before {
+  clear: both;
+  content: "";
+  display: block; }
+
+.image-left {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px; }
+
+.image-right {
+  position: absolute;
+  right: 0;
+  margin: 0;
+  width: 60px;
+  height: 60px; }
+
+.ballon figure .left {
+  width: 100%;
+  height: 100%;
+  /* アイコンのボーダー色設定（左） */
+  border: 2px solid #65ffff;
+  border-radius: 50%;
+  margin: 0; }
+
+.ballon figure .right {
+  width: 100%;
+  height: 100%;
+  /* アイコンのボーダー色設定（右） */
+  border: 2px solid #ffcc32;
+  border-radius: 50%;
+  margin: 0; }
+
+.image-description {
+  padding: 5px 0 0;
+  font-size: 10px;
+  text-align: center; }
+
+.text-right {
+  position: relative;
+  margin-left: 40px;
+  padding: 10px;
+  /* テキストボーダー色設定（右） */
+  border: 1px solid #00cbcb;
+  border-radius: 10px;
+  float: left;
+  max-width: 100%;
+  /* テキスト欄の色設定（右） */
+  background-color: #fff; }
+
+.text-left {
+  position: relative;
+  margin-right: 40px;
+  padding: 10px;
+  /* テキストボーダー色設定（左） */
+  border: 1px solid #ffcc32;
+  border-radius: 10px;
+  float: right;
+  max-width: 100%;
+  /* テキスト欄の色設定（左） */
+  background-color: #fff2cc; }
+
+.ballon p {
+  margin: 0 0 20px; }
+
+.ballon p:last-child {
+  margin-bottom: 0; }
+
+/* 会話 */
+.text-right:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  /* 三角の色設定（右） */
+  border-right: 10px solid #00cbcb;
+  top: 15px;
+  left: -20px; }
+
+.text-right:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  /* テキスト欄の色設定（右） */
+  border-right: 10px solid #fff;
+  top: 15px;
+  left: -19px; }
+
+.text-left:before {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  /* 三角の色設定（左） */
+  border-left: 10px solid #ffcc32;
+  top: 15px;
+  right: -20px; }
+
+.text-left:after {
+  position: absolute;
+  content: '';
+  border: 10px solid transparent;
+  /* テキスト欄の色設定（左） */
+  border-left: 10px solid #fff2cc;
+  top: 15px;
+  right: -19px; }
+
+/* 考え事風の吹き出し作成 */
+.think .text-right, .think .text-left {
+  border-radius: 30px; }
+
+.think .text-right:before {
+  border: 1px solid #00cbcb;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  top: 15px;
+  left: -12px; }
+
+.think .text-right:after {
+  border: 1px solid #00cbcb;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  top: 20px;
+  left: -19px; }
+
+.think .text-left:before {
+  border: 1px solid #ffcc32;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  top: 15px;
+  right: -12px; }
+
+.think .text-left:after {
+  border: 1px solid #ffcc32;
+  border-radius: 50%;
+  width: 4px;
+  height: 4px;
+  top: 20px;
+  right: -19px; }
+
+/*# sourceMappingURL=sass.css.map */
